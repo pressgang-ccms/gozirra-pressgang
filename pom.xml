@@ -3,12 +3,109 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>germane-software</groupId>
+    <groupId>org.jboss.pressgang.ccms</groupId>
     <artifactId>gozirra-extended</artifactId>
     <packaging>jar</packaging>
     <version>0.5-SNAPSHOT</version>
     <name>Gozirra</name>
     <description>Java Stomp library</description>
+    
+    <!--  START OF SONATYPE REQUIREMENTS -->
+
+	<developers>
+		<developer>
+			<id>mcasperson</id>
+			<name>Matthew Casperson</name>
+			<email>mcaspers@redhat.com</email>
+		</developer>
+		<developer>
+			<id>lnewson</id>
+			<name>Lee Newson</name>
+			<email>lnewson@redhat.com</email>
+		</developer>
+		<developer>
+			<id>codemiller</id>
+			<name>Katie Miller</name>
+			<email>kamiller@redhat.com</email>
+		</developer>
+	</developers>
+	<licenses>
+		<license>
+			<name>LGPL 2.1 license</name>
+			<url>http://www.opensource.org/licenses/lgpl-2.1.php</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
+	<scm>
+		<url>https://github.com/lnewson/gozirra-extended</url>
+		<connection>scm:git@github.com:lnewson/gozirra-extended.git</connection>
+		<developerConnection>scm:git@github.com:lnewson/gozirra-extended.git</developerConnection>
+	</scm>
+
+	<parent>
+		<groupId>org.sonatype.oss</groupId>
+		<artifactId>oss-parent</artifactId>
+		<version>7</version>
+	</parent>
+
+	<!-- https://docs.sonatype.org/display/Repository/How+To+Generate+PGP+Signatures+With+Maven#HowToGeneratePGPSignaturesWithMaven-MavenGPGPlugin -->
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-gpg-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>sign-artifacts</id>
+						<phase>verify</phase>
+						<goals>
+							<goal>sign</goal>
+						</goals>
+						<configuration>
+							<keyname>62B72888</keyname>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+
+			<!-- http://maven.apache.org/plugin-developers/cookbook/attach-source-javadoc-artifacts.html -->
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-source-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>attach-sources</id>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-javadoc-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>attach-javadocs</id>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.6</source>
+					<target>1.6</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+	
+	<!--  END OF SONATYPE REQUIREMENTS -->
 
     <dependencies>
         <dependency>
