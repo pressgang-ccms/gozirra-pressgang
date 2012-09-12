@@ -1,16 +1,16 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
-    <modelVersion>4.0.0</modelVersion>
+	<modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.jboss.pressgang.ccms</groupId>
-    <artifactId>gozirra-extended</artifactId>
-    <packaging>jar</packaging>
-    <version>0.5-SNAPSHOT</version>
-    <name>Gozirra</name>
-    <description>Java Stomp library</description>
-    
-    <!--  START OF SONATYPE REQUIREMENTS -->
+	<groupId>org.jboss.pressgangccms</groupId>
+	<artifactId>gozirra-extended</artifactId>
+	<packaging>jar</packaging>
+	<version>0.5-SNAPSHOT</version>
+	<name>Gozirra</name>
+	<description>Java Stomp library</description>
+
+	<!-- START OF SONATYPE REQUIREMENTS -->
 
 	<developers>
 		<developer>
@@ -102,29 +102,25 @@
 					<target>1.6</target>
 				</configuration>
 			</plugin>
+
+			<plugin>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<configuration>
+					<excludes>
+					</excludes>
+				</configuration>
+			</plugin>
 		</plugins>
 	</build>
-	
-	<!--  END OF SONATYPE REQUIREMENTS -->
 
-    <dependencies>
-        <dependency>
-            <groupId>commons-logging</groupId>
-            <artifactId>commons-logging</artifactId>
-             <version>1.1.1</version>
-        </dependency>
-    </dependencies>
+	<!-- END OF SONATYPE REQUIREMENTS -->
 
-    <build>
-        <plugins>
-            <plugin>
-                <artifactId>maven-surefire-plugin</artifactId>
-                <configuration>
-                    <excludes>
-                    </excludes>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
+	<dependencies>
+		<dependency>
+			<groupId>commons-logging</groupId>
+			<artifactId>commons-logging</artifactId>
+			<version>1.1.1</version>
+		</dependency>
+	</dependencies>
 
 </project>
