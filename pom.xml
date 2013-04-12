@@ -4,10 +4,10 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>org.jboss.pressgang.ccms</groupId>
-	<artifactId>gozirra-extended</artifactId>
+	<artifactId>gozirra-pressgang</artifactId>
 	<packaging>jar</packaging>
 	<version>0.5-SNAPSHOT</version>
-	<name>Gozirra-Extended</name>
+	<name>Gozirra-PressGang</name>
 	<description>Java Stomp library</description>
 
 	<parent>
@@ -17,9 +17,9 @@
 	</parent>
 
 	<scm>
-		<url>https://github.com/lnewson/gozirra-extended</url>
-		<connection>scm:git@github.com:lnewson/gozirra-extended.git</connection>
-		<developerConnection>scm:git@github.com:lnewson/gozirra-extended.git</developerConnection>
+		<url>https://github.com/pressgang-ccms/gozirra-pressang</url>
+		<connection>scm:git@github.com:pressgang-ccms/gozirra-pressgang.git</connection>
+		<developerConnection>scm:git@github.com:pressgang-ccms/gozirra-pressang.git</developerConnection>
 	</scm>
 
 	<dependencies>
